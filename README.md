@@ -245,7 +245,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👤 Author
 
-**Your Name**
+**Abhineeth V S**
 
 - GitHub: [@AbhineethVS](https://github.com/AbhineethVS)
 - Project built as part of independent learning in AI & full-stack development
