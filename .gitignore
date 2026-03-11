@@ -1,0 +1,32 @@
+# Virtual environment
+ai-backend/venv/
+
+# Python cache
+ai-backend/__pycache__/
+*.pyc
+*.pyo
+
+# Uploaded files
+ai-backend/uploads/
+
+# HuggingFace model cache
+.cache/
+
+# Environment variables
+.env
+*.env
+
+# VS Code
+.vscode/
+
+# Folders you don't want pushed
+exp/
+node-backend/
+test/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Zip files
+*.zip

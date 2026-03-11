@@ -1,0 +1,7 @@
+flask
+flask-cors
+transformers
+pillow
+opencv-python
+torch
+torchvision

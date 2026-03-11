@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>VERIFYE AI — Deepfake Detection</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<!-- NOISE OVERLAY -->
+		<div class="noise"></div>
+
+		<!-- NAVBAR -->
+		<nav id="navbar">
+			<div class="nav-logo">
+				<span class="logo-icon">◈</span>
+				<span>VERIFEYE<em>AI</em></span>
+			</div>
+			<ul class="nav-links">
+				<li><a href="#">Home</a></li>
+				<li><a href="#upload">Detector</a></li>
+				<li><a href="#how">How it Works</a></li>
+				<li><a href="#pricing">Pricing</a></li>
+			</ul>
+			<button
+				class="nav-cta"
+				onclick="
+					document
+						.getElementById('upload')
+						.scrollIntoView({ behavior: 'smooth' })
+				"
+			>
+				Try Free
+			</button>
+		</nav>
+
+		<!-- HERO -->
+		<section class="hero">
+			<div class="hero-bg">
+				<div class="orb orb1"></div>
+				<div class="orb orb2"></div>
+				<div class="orb orb3"></div>
+				<div class="scan-line"></div>
+			</div>
+			<div class="hero-content">
+				<div class="hero-badge">
+					<span class="pulse-dot"></span>
+					AI-Powered · Real-Time Analysis
+				</div>
+				<h1>
+					Don't Trust<br />
+					<span class="gradient-text">Every Face</span><br />
+					You See.
+				</h1>
+				<p class="hero-sub">
+					VERIFYE AI uses cutting-edge neural networks to detect
+					manipulated media in seconds — protecting journalists,
+					organizations, and individuals from synthetic deception.
+				</p>
+				<div class="hero-actions">
+					<button
+						class="btn-primary"
+						onclick="
+							document
+								.getElementById('upload')
+								.scrollIntoView({ behavior: 'smooth' })
+						"
+					>
+						<span>Analyze Media</span>
+						<svg
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2.5"
+						>
+							<path d="M5 12h14M12 5l7 7-7 7" />
+						</svg>
+					</button>
+					<button
+						class="btn-ghost"
+						onclick="
+							document
+								.getElementById('how')
+								.scrollIntoView({ behavior: 'smooth' })
+						"
+					>
+						How it Works
+					</button>
+				</div>
+				<div class="hero-stats">
+					<div class="stat">
+						<span class="stat-num">99.2%</span
+						><span class="stat-label">Accuracy Rate</span>
+					</div>
+					<div class="stat-divider"></div>
+					<div class="stat">
+						<span class="stat-num">2.1s</span
+						><span class="stat-label">Avg. Analysis Time</span>
+					</div>
+					<div class="stat-divider"></div>
+					<div class="stat">
+						<span class="stat-num">4M+</span
+						><span class="stat-label">Files Verified</span>
+					</div>
+				</div>
+			</div>
+			<div class="hero-visual">
+				<div class="scan-frame">
+					<div class="face-grid">
+						<div class="face-placeholder">
+							<div class="face-lines">
+								<div class="fl fl1"></div>
+								<div class="fl fl2"></div>
+								<div class="fl fl3"></div>
+								<div class="fl fl4"></div>
+							</div>
+							<div class="scan-beam"></div>
+							<div class="face-icon">
+								<svg
+									viewBox="0 0 100 100"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<circle
+										cx="50"
+										cy="38"
+										r="22"
+										stroke="#00f5d4"
+										stroke-width="1.5"
+										stroke-dasharray="4 2"
+									/>
+									<line
+										x1="20"
+										y1="38"
+										x2="30"
+										y2="38"
+										stroke="#00f5d4"
+										stroke-width="1"
+									/>
+									<line
+										x1="70"
+										y1="38"
+										x2="80"
+										y2="38"
+										stroke="#00f5d4"
+										stroke-width="1"
+									/>
+									<circle
+										cx="42"
+										cy="33"
+										r="3"
+										fill="#00f5d4"
+										opacity="0.7"
+									/>
+									<circle
+										cx="58"
+										cy="33"
+										r="3"
+										fill="#00f5d4"
+										opacity="0.7"
+									/>
+									<path
+										d="M43 46 Q50 51 57 46"
+										stroke="#00f5d4"
+										stroke-width="1.5"
+										stroke-linecap="round"
+									/>
+									<path
+										d="M30 70 Q50 85 70 70"
+										stroke="#00f5d4"
+										stroke-width="1.5"
+										fill="none"
+									/>
+									<line
+										x1="50"
+										y1="60"
+										x2="50"
+										y2="72"
+										stroke="#00f5d4"
+										stroke-width="1"
+									/>
+								</svg>
+							</div>
+							<div class="corner-tl"></div>
+							<div class="corner-tr"></div>
+							<div class="corner-bl"></div>
+							<div class="corner-br"></div>
+						</div>
+					</div>
+					<div class="scan-data">
+						<div class="data-row">
+							<span class="data-label">STATUS</span
+							><span class="data-val scanning">SCANNING...</span>
+						</div>
+						<div class="data-row">
+							<span class="data-label">LAYER</span
+							><span class="data-val">DeepNet v4.2</span>
+						</div>
+						<div class="data-row">
+							<span class="data-label">FRAMES</span
+							><span class="data-val">—</span>
+						</div>
+						<div class="data-row">
+							<span class="data-label">CONFIDENCE</span
+							><span class="data-val">—</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- TRUSTED BY -->
+		<section class="trusted">
+			<p class="trusted-label">Trusted by professionals in</p>
+			<div class="trusted-logos">
+				<span>Journalism</span>
+				<span>·</span>
+				<span>Law Enforcement</span>
+				<span>·</span>
+				<span>Social Platforms</span>
+				<span>·</span>
+				<span>Government</span>
+				<span>·</span>
+				<span>Media Houses</span>
+			</div>
+		</section>
+
+		<!-- UPLOAD SECTION -->
+		<section id="upload" class="upload-section">
+			<div class="section-header">
+				<div class="section-tag">DEEPFAKE DETECTOR</div>
+				<h2>Upload & Analyze</h2>
+				<p>
+					Drop an image or video and let our AI do the rest. Results
+					in under 3 seconds.
+				</p>
+			</div>
+			<div class="upload-card">
+				<div
+					class="upload-zone"
+					id="dropZone"
+					onclick="document.getElementById('fileInput').click()"
+				>
+					<div class="upload-icon">
+						<svg
+							width="48"
+							height="48"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.5"
+						>
+							<path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+							<polyline points="17 8 12 3 7 8" />
+							<line x1="12" y1="3" x2="12" y2="15" />
+						</svg>
+					</div>
+					<p class="upload-text">Drag & drop your file here</p>
+					<p class="upload-sub">
+						Supports JPG, PNG, MP4, MOV · Max 50MB
+					</p>
+					<div class="upload-btn-inner">Browse Files</div>
+					<input
+						type="file"
+						id="fileInput"
+						accept="image/*,video/*"
+						style="display: none"
+						onchange="handleFile(this)"
+					/>
+				</div>
+				<div
+					id="file-preview"
+					class="file-preview"
+					style="display: none"
+				>
+					<div class="file-info">
+						<span class="file-icon">📄</span>
+						<span id="file-name"></span>
+						<button class="remove-file" onclick="removeFile()">
+							✕
+						</button>
+					</div>
+				</div>
+				<button type="button" class="btn-analyze" id="analyzeBtn">
+					<span class="btn-text">Run Analysis</span>
+					<span class="btn-loader" style="display: none">
+						<svg
+							class="spinner"
+							width="18"
+							height="18"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2.5"
+						>
+							<path
+								d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"
+							/>
+						</svg>
+						Analyzing...
+					</span>
+				</button>
+				<div id="result" class="result-box" style="display: none"></div>
+			</div>
+		</section>
+
+		<!-- HOW IT WORKS -->
+		<section id="how" class="how-section">
+			<div class="section-header">
+				<div class="section-tag">THE PROCESS</div>
+				<h2>How VERIFYE AI Works</h2>
+				<p>
+					Three layers of forensic AI working together to catch what
+					the human eye misses.
+				</p>
+			</div>
+			<div class="steps-grid">
+				<div class="step-card">
+					<div class="step-num">01</div>
+					<div class="step-icon">🧠</div>
+					<h3>Neural Analysis</h3>
+					<p>
+						Deep convolutional networks trained on millions of real
+						and synthetic faces detect micro-inconsistencies in
+						facial geometry, blending artifacts, and unnatural pixel
+						distributions.
+					</p>
+					<div class="step-line"></div>
+				</div>
+				<div class="step-card">
+					<div class="step-num">02</div>
+					<div class="step-icon">🔬</div>
+					<h3>Feature Extraction</h3>
+					<p>
+						Advanced algorithms scan for lighting inconsistencies,
+						unnatural eye reflections, texture mismatches, and
+						temporal incoherence across video frames.
+					</p>
+					<div class="step-line"></div>
+				</div>
+				<div class="step-card">
+					<div class="step-num">03</div>
+					<div class="step-icon">📊</div>
+					<h3>Confidence Score</h3>
+					<p>
+						A multi-model ensemble produces a final manipulation
+						probability score, flagged with detailed annotations and
+						a heatmap showing where anomalies were detected.
+					</p>
+					<div class="step-line"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- FEATURES -->
+		<section class="features-section">
+			<div class="features-left">
+				<div class="section-tag">WHY VERIFYE</div>
+				<h2>
+					Built for<br /><span class="gradient-text">Real-World</span
+					><br />Verification
+				</h2>
+				<p>
+					VERIFYE AI is designed for professionals who can't afford to
+					be wrong. Trusted in newsrooms, courtrooms, and boardrooms.
+				</p>
+				<button
+					class="btn-primary"
+					onclick="
+						document
+							.getElementById('upload')
+							.scrollIntoView({ behavior: 'smooth' })
+					"
+				>
+					<span>Start Free Trial</span>
+					<svg
+						width="16"
+						height="16"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2.5"
+					>
+						<path d="M5 12h14M12 5l7 7-7 7" />
+					</svg>
+				</button>
+			</div>
+			<div class="features-right">
+				<div class="feature-item">
+					<div class="feature-icon">⚡</div>
+					<div>
+						<h4>Real-Time Detection</h4>
+						<p>
+							Average analysis completes in under 2.1 seconds,
+							even for high-resolution video clips.
+						</p>
+					</div>
+				</div>
+				<div class="feature-item">
+					<div class="feature-icon">🔒</div>
+					<div>
+						<h4>Privacy First</h4>
+						<p>
+							Your files are never stored. All analysis happens
+							in-memory and is wiped immediately after results are
+							returned.
+						</p>
+					</div>
+				</div>
+				<div class="feature-item">
+					<div class="feature-icon">📡</div>
+					<div>
+						<h4>API Access</h4>
+						<p>
+							Integrate VERIFYE AI into your platform via our REST
+							API with just a few lines of code.
+						</p>
+					</div>
+				</div>
+				<div class="feature-item">
+					<div class="feature-icon">🌍</div>
+					<div>
+						<h4>Multi-Language Support</h4>
+						<p>
+							Works across all ethnicities, languages, and media
+							formats with no bias in detection accuracy.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PRICING -->
+		<section id="pricing" class="pricing-section">
+			<div class="section-header">
+				<div class="section-tag">SUBSCRIPTION PLANS</div>
+				<h2>Simple, Transparent Pricing</h2>
+				<p>
+					Start free, scale when you're ready. No hidden fees, no
+					surprises.
+				</p>
+			</div>
+			<div class="pricing-grid">
+				<!-- STARTER -->
+				<div class="pricing-card">
+					<div class="plan-name">Starter</div>
+					<div class="plan-price">
+						<span class="price-currency">$</span>0<span
+							class="price-period"
+							>/mo</span
+						>
+					</div>
+					<p class="plan-desc">
+						Perfect for individuals exploring deepfake detection for
+						personal use.
+					</p>
+					<ul class="plan-features">
+						<li>
+							<span class="check">✓</span> 20 analyses per month
+						</li>
+						<li>
+							<span class="check">✓</span> Image & video support
+						</li>
+						<li>
+							<span class="check">✓</span> Basic confidence score
+						</li>
+						<li><span class="check">✓</span> Max 10MB file size</li>
+						<li><span class="x">✗</span> API access</li>
+						<li><span class="x">✗</span> Priority processing</li>
+						<li><span class="x">✗</span> Detailed heatmaps</li>
+					</ul>
+					<button class="plan-btn plan-btn-ghost">
+						Get Started Free
+					</button>
+				</div>
+
+				<!-- PRO (FEATURED) -->
+				<div class="pricing-card pricing-featured">
+					<div class="plan-badge">MOST POPULAR</div>
+					<div class="plan-name">Pro</div>
+					<div class="plan-price">
+						<span class="price-currency">$</span>29<span
+							class="price-period"
+							>/mo</span
+						>
+					</div>
+					<p class="plan-desc">
+						For journalists, researchers, and content creators who
+						need reliable accuracy.
+					</p>
+					<ul class="plan-features">
+						<li>
+							<span class="check">✓</span> 500 analyses per month
+						</li>
+						<li>
+							<span class="check">✓</span> Image, video & audio
+						</li>
+						<li>
+							<span class="check">✓</span> Advanced confidence
+							score
+						</li>
+						<li>
+							<span class="check">✓</span> Max 100MB file size
+						</li>
+						<li><span class="check">✓</span> Full API access</li>
+						<li>
+							<span class="check">✓</span> Priority processing
+						</li>
+						<li><span class="check">✓</span> Detailed heatmaps</li>
+					</ul>
+					<button class="plan-btn plan-btn-primary">
+						Start Pro Trial
+					</button>
+				</div>
+
+				<!-- ENTERPRISE -->
+				<div class="pricing-card">
+					<div class="plan-name">Enterprise</div>
+					<div class="plan-price">
+						<span class="price-currency">$</span>199<span
+							class="price-period"
+							>/mo</span
+						>
+					</div>
+					<p class="plan-desc">
+						For organizations, platforms, and agencies requiring
+						scale and compliance.
+					</p>
+					<ul class="plan-features">
+						<li><span class="check">✓</span> Unlimited analyses</li>
+						<li><span class="check">✓</span> All media types</li>
+						<li>
+							<span class="check">✓</span> Forensic-grade reports
+						</li>
+						<li>
+							<span class="check">✓</span> Unlimited file size
+						</li>
+						<li><span class="check">✓</span> Dedicated API key</li>
+						<li><span class="check">✓</span> SLA guarantee</li>
+						<li><span class="check">✓</span> White-label option</li>
+					</ul>
+					<button class="plan-btn plan-btn-ghost">
+						Contact Sales
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA BANNER -->
+		<section class="cta-banner">
+			<div class="cta-orb"></div>
+			<h2>The truth is worth protecting.</h2>
+			<p>
+				Join thousands of professionals who trust VERIFYE AI to verify
+				what their eyes can't.
+			</p>
+			<button
+				class="btn-primary"
+				onclick="
+					document
+						.getElementById('upload')
+						.scrollIntoView({ behavior: 'smooth' })
+				"
+			>
+				<span>Analyze Your First File Free</span>
+				<svg
+					width="16"
+					height="16"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2.5"
+				>
+					<path d="M5 12h14M12 5l7 7-7 7" />
+				</svg>
+			</button>
+		</section>
+
+		<!-- FOOTER -->
+		<footer>
+			<div class="footer-top">
+				<div class="footer-brand">
+					<span class="logo-icon">◈</span>
+					<span class="footer-name">VERIFYE<em>AI</em></span>
+					<p>Ensuring digital trust through forensic AI.</p>
+				</div>
+				<div class="footer-links">
+					<div class="footer-col">
+						<h5>Product</h5>
+						<a href="#">Detector</a>
+						<a href="#">API Docs</a>
+						<a href="#">Pricing</a>
+						<a href="#">Changelog</a>
+					</div>
+					<div class="footer-col">
+						<h5>Company</h5>
+						<a href="#">About</a>
+						<a href="#">Blog</a>
+						<a href="#">Careers</a>
+						<a href="#">Contact</a>
+					</div>
+					<div class="footer-col">
+						<h5>Legal</h5>
+						<a href="#">Privacy</a>
+						<a href="#">Terms</a>
+						<a href="#">Cookie Policy</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>© 2026 VERIFYE AI — All rights reserved.</p>
+				<p>Built to protect digital truth.</p>
+			</div>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+</html>
